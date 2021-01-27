@@ -123,6 +123,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
+                tools:listitem="@layout/show_recyclerview"
                 app:layout_constraintTop_toBottomOf="@id/btnAdd_Detalis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>

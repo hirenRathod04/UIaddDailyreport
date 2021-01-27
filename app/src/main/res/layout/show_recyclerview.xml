@@ -1,13 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:padding="20dp"
-        android:id="@+id/tvAnimalName"
-        android:text="fgfgfg"
-        android:gravity="center"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:backgroundTint="@color/button_color"
+    android:id="@+id/constraintLayout"
+    android:layout_marginTop="20dp"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    app:cardCornerRadius="15dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"/>
-</LinearLayout>
+        android:weightSum="11"
+        android:gravity="center_vertical"
+
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvSr_No"
+            android:layout_weight="1"
+            android:text="1."
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/tvDRreport"
+            android:layout_weight="7"
+            android:text="details"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <Space
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:minWidth="10dp"
+            android:layout_height="match_parent"/>
+
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+
+            android:id="@+id/ciFileAttachment"
+            android:layout_marginRight="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_close_black_24dp"
+            app:civ_border_color="@color/black"
+            app:civ_border_width="2dp"
+            android:background="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/etReport"
+            app:layout_constraintBottom_toBottomOf="@id/etReport" />
+        <ImageView
+
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>
