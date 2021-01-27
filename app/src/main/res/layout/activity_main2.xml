@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_arrow_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+
+        android:id="@+id/ivAdd"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/constraintLayout"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <View
+                android:id="@+id/vLine1"
+               app:layout_constraintTop_toTopOf="@id/cv"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+         <TextView
+             android:id="@+id/tvTodayDate"
+             android:text="Date"
+             android:padding="5dp"
+             app:layout_constraintTop_toBottomOf="@id/vLine1"
+             android:gravity="center"
+             android:textColor="@color/button_color"
+             android:background="@android:color/transparent"
+             android:layout_marginLeft="20dp"
+             android:layout_marginRight="20dp"
+             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvAddReport"
+                android:text="AddReport"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/transparent"
+                android:textColor="@color/button_color"
+                android:textSize="15sp"
+              app:layout_constraintTop_toBottomOf="@id/tvTodayDate"/>
+            <EditText
+                android:id="@+id/etReport"
+                android:hint="Enter Report Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="60dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/edittext_boderline"
+                android:padding="10dp"
+                android:textColorHint="@color/Text_hint"
+                android:textColor="@color/Text"
+                android:textSize="20sp"
+                android:gravity="center"
+
+                app:layout_constraintTop_toBottomOf="@id/tvAddReport"/>
+
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/ciFileAttachment"
+                android:layout_marginRight="10dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/file_attachment_icon"
+                app:civ_border_color="@color/button_color"
+                app:civ_border_width="1dp"
+                android:background="@android:color/transparent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/etReport"
+                app:layout_constraintBottom_toBottomOf="@id/etReport" />
+            <Button
+
+                android:id="@+id/btnAdd_Detalis"
+                android:text="Add Details"
+                app:backgroundTint="@color/button_color"
+                android:textColor="@color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_shape"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/ciFileAttachment"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTodayReport"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintTop_toBottomOf="@id/btnAdd_Detalis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
