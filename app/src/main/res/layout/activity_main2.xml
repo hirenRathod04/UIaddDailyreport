@@ -92,7 +92,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginRight="60dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/edittext_boderline"
                 android:padding="10dp"
@@ -100,24 +100,52 @@
                 android:textColor="@color/Text"
                 android:textSize="20sp"
                 android:gravity="center"
-
                 app:layout_constraintTop_toBottomOf="@id/tvAddReport"/>
 
 
 
-            <de.hdodenhof.circleimageview.CircleImageView
 
-                android:id="@+id/ciFileAttachment"
+            <LinearLayout
+                android:id="@+id/llAttachment"
+                android:padding="10dp"
+                android:background="@drawable/edittext_boderline"
+                android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/file_attachment_icon"
-                app:civ_border_color="@color/button_color"
-                app:civ_border_width="1dp"
-                android:background="@android:color/transparent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="@id/etReport"
-                app:layout_constraintBottom_toBottomOf="@id/etReport" />
+                app:layout_constraintTop_toBottomOf="@id/etReport"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+
+                    android:id="@+id/ciFileAttachment"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/file_attachment_icon"
+                    app:civ_border_color="@color/button_color"
+                    app:civ_border_width="1dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@android:color/transparent"
+                     />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="File Attachment"
+                   android:background="@android:color/transparent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="30dp"
+
+
+
+                    android:textColorHint="@color/Text_hint"
+                    android:textColor="@color/Text"
+                    android:textSize="20sp"
+                    android:gravity="center"/>
+
+            </LinearLayout>
             <Button
 
                 android:id="@+id/btnAdd_Detalis"
@@ -126,11 +154,11 @@
                 android:textColor="@color/white"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/button_shape"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_constraintTop_toBottomOf="@id/etReport"/>
+                app:layout_constraintTop_toBottomOf="@id/llAttachment"/>
 
 
 
