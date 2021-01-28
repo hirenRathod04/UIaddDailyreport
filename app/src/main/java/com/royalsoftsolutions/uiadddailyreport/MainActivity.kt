@@ -12,9 +12,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val button = findViewById<Button>(R.id.btnAddReport)
-        button.setOnClickListener{
+        button.setOnClickListener {
             val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
+        }
     }
-}
 }
