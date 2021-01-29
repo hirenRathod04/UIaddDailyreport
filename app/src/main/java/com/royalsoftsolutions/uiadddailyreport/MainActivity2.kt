@@ -27,7 +27,7 @@ class MainActivity2 : AppCompatActivity() {
     private var userName: String = ""
     private val formatted = 0
     private var srNo = 1
-
+    private   var serial_no : String =""
     private val myList = ArrayList<RecyclerItem>()
     private lateinit var myAdapter: MyAdepter
     private lateinit var ivBack : ImageView
@@ -38,6 +38,7 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var ciFileAttachment : CircleImageView
     private lateinit var btnAdd_Detalis : Button
     private lateinit var recyclerView : RecyclerView
+
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -65,13 +66,20 @@ class MainActivity2 : AppCompatActivity() {
 
         btnAdd_Detalis.setOnClickListener {
             val reportData = etReport.text.toString().trim()
+             serial_number ()
 
-            myList.add(RecyclerItem(srNo.toString(), reportData, "", ""))
+            myList.add(RecyclerItem(serial_no, reportData, "", ""))
             srNo++
             myAdapter.updateList(myList)
         }
     }
 
+    private  fun serial_number() {
+        val a = srNo.toString()
+        val b = "."
+        serial_no = a + b
+
+    }
 
     private fun init() {
         //set today date
