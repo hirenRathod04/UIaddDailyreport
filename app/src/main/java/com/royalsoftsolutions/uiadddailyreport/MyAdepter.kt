@@ -21,6 +21,7 @@ class MyAdepter(private var dailyreportList: List<RecyclerItem>) :
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val daily_r_details = dailyreportList[position]
         holder.report_text.text = daily_r_details.getTitle()
+        holder.report_sr.text = daily_r_details.getno()
         holder.option_popupmenu.text = daily_r_details.getOption()
     }
 
@@ -29,6 +30,8 @@ class MyAdepter(private var dailyreportList: List<RecyclerItem>) :
     }
 
     inner class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        var report_sr: TextView = view.findViewById(R.id.tvSr_No)
         var report_text: TextView = view.findViewById(R.id.tvDRreport)
         var attachment: CircleImageView = view.findViewById(R.id.ibtn_drattachment)
         var option_popupmenu: TextView = view.findViewById(R.id.txtOptionDigit)

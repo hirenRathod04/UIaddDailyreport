@@ -112,8 +112,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
+                android:background="@drawable/button_shape"
                 android:layout_marginRight="10dp"
-                android:background="@drawable/edittext_boderline"
+
+                android:textColor="@color/white"
+                android:backgroundTint="@color/button_color"
+
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:padding="10dp"
@@ -126,26 +130,29 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
                     android:background="@android:color/transparent"
-                    android:src="@drawable/file_attachment_icon"
-                    app:civ_border_color="@color/button_color"
-                    app:civ_border_width="1dp" />
+                    android:src="@drawable/ic_baseline_attachment_24"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="2dp" />
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="30dp"
-                    android:background="@android:color/transparent"
+                    android:layout_marginRight="60dp"
                     android:gravity="center"
+                    android:background="@drawable/button_shape"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/button_color"
                     android:text="File Attachment"
-                    android:textColor="@color/Text"
                     android:textColorHint="@color/Text_hint"
-                    android:textSize="20sp" />
+                    android:textSize="20sp"/>
 
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnAdd_Detalis"
+                android:textSize="20sp"
+                android:textAllCaps="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -155,6 +162,7 @@
                 android:text="Add Details"
                 android:textColor="@color/white"
                 app:backgroundTint="@color/button_color"
+
                 app:layout_constraintTop_toBottomOf="@id/llAttachment" />
 
             <androidx.recyclerview.widget.RecyclerView

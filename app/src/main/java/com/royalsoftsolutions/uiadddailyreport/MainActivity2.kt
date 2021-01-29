@@ -26,6 +26,7 @@ class MainActivity2 : AppCompatActivity() {
     //lateinit var binding: ActivityMainBinding
     private var userName: String = ""
     private val formatted = 0
+    private var srNo = 1
 
     private val myList = ArrayList<RecyclerItem>()
     private lateinit var myAdapter: MyAdepter
@@ -33,6 +34,7 @@ class MainActivity2 : AppCompatActivity() {
     private lateinit var tvAddReport : TextView
     private lateinit var tvTodayDate : TextView
     private lateinit var etReport : EditText
+    private lateinit var tvSr_No : EditText
     private lateinit var ciFileAttachment : CircleImageView
     private lateinit var btnAdd_Detalis : Button
     private lateinit var recyclerView : RecyclerView
@@ -63,7 +65,9 @@ class MainActivity2 : AppCompatActivity() {
 
         btnAdd_Detalis.setOnClickListener {
             val reportData = etReport.text.toString().trim()
-            myList.add(RecyclerItem(reportData, "", ""))
+
+            myList.add(RecyclerItem(srNo.toString(), reportData, "", ""))
+            srNo++
             myAdapter.updateList(myList)
         }
     }
