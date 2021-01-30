@@ -34,7 +34,7 @@ class MyAdepter(private var dailyreportList: List<RecyclerItem>) :
         var report_sr: TextView = view.findViewById(R.id.tvSr_No)
         var report_text: TextView = view.findViewById(R.id.tvDRreport)
         var attachment: CircleImageView = view.findViewById(R.id.ibtn_drattachment)
-        var option_popupmenu: TextView = view.findViewById(R.id.txtOptionDigit)
+       var option_popupmenu: TextView = view.findViewById(R.id.txtOptionDigit)
     }
 
     fun updateList(list:List<RecyclerItem>){
