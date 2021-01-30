@@ -113,7 +113,7 @@
                             android:visibility="gone" />
 
                         <ImageView
-
+                            android:id="@+id/Rv_Edit"
                             android:layout_width="50dp"
                             android:layout_height="match_parent"
                             android:background="@drawable/background_green"
@@ -121,9 +121,8 @@
                             android:src="@drawable/ic_edit_white"
                             />
 
-
                         <ImageView
-
+                            android:id="@+id/Rv_Delete"
                             android:layout_width="50dp"
                             android:layout_height="match_parent"
                             android:background="@drawable/background_red"

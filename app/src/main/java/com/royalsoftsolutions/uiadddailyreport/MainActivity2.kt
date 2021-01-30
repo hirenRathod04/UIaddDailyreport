@@ -4,10 +4,7 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import de.hdodenhof.circleimageview.CircleImageView
@@ -29,7 +26,7 @@ class MainActivity2 : AppCompatActivity() {
     private var srNo = 1
     private   var serial_no : String =""
     private val myList = ArrayList<RecyclerItem>()
-    private lateinit var myAdapter: MyAdepter
+    private lateinit var myAdapter_m: MyAdepter
     private lateinit var ivBack : ImageView
     private lateinit var tvAddReport : TextView
     private lateinit var tvTodayDate : TextView
@@ -70,10 +67,20 @@ class MainActivity2 : AppCompatActivity() {
 
             myList.add(RecyclerItem(serial_no, reportData, "", ""))
             srNo++
-            myAdapter.updateList(myList)
+            myAdapter_m.updateList(myList)
+
         }
     }
-
+    fun from_myadepter(){
+        Toast.makeText(applicationContext,"deleted",Toast.LENGTH_SHORT).show()
+       /* srNo = 0
+        val reportData = etReport.text.toString().trim()
+        myList.add(RecyclerItem(serial_no, reportData, "", ""))
+        srNo++
+        myAdapter_m.updateList(myList)*/
+       /* dailyreportList = list
+        notifyDataSetChanged()*/
+    }
     private  fun serial_number() {
         val a = srNo.toString()
         val b = "."
@@ -94,8 +101,8 @@ class MainActivity2 : AppCompatActivity() {
 
         //initialize recyclerview
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
-        myAdapter = MyAdepter(myList)
-        recyclerView.adapter = myAdapter
+        myAdapter_m = MyAdepter(context,myList)
+        recyclerView.adapter = myAdapter_m
     }
 
 }
