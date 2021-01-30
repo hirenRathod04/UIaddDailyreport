@@ -26,6 +26,7 @@ class MainActivity2 : AppCompatActivity() {
     private var srNo = 1
     private   var serial_no : String =""
     private val myList = ArrayList<RecyclerItem>()
+    private lateinit var   getActualdate :   getActualTime
     private lateinit var myAdapter_m: MyAdepter
     private lateinit var ivBack : ImageView
     private lateinit var tvAddReport : TextView
@@ -72,11 +73,11 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
     fun from_myadepter(){
-        myAdapter_m.notifyDataSetChanged()
+       /* myAdapter_m.notifyDataSetChanged()
         //setContentView(R.layout.activity_main2)
 
         Toast.makeText(applicationContext,"deleted",Toast.LENGTH_SHORT).show()
-        Toast.makeText(context,"deleted2", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context,"deleted2", Toast.LENGTH_SHORT).show()*/
        /* srNo = 0
         val reportData = etReport.text.toString().trim()
         myList.add(RecyclerItem(serial_no, reportData, "", ""))
@@ -93,10 +94,14 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     private fun init() {
-        //set today date
+        val SIZE = getActualTime().currentDateAndTime
+        tvTodayDate.text = SIZE
+
+
+     /*   //set today date
         val simpleDateFormat = SimpleDateFormat("dd-MM-yyyy")
         val currentDateAndTime: String = simpleDateFormat.format(Date())
-        tvTodayDate.text = currentDateAndTime
+        tvTodayDate.text = currentDateAndTime*/
 
        /* //clear list
         if (myList.isNotEmpty()) {

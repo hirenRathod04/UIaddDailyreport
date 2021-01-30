@@ -85,9 +85,9 @@ class MyAdepter(
 fun delete(index: Int){
     dailyreportList.removeAt(index)
     notifyDataSetChanged()
-    if(context is MainActivity2){
+  /*  if(context is MainActivity2){
         (context as MainActivity2).from_myadepter()
-    }
+    }*/
 
 }
 
