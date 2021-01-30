@@ -98,11 +98,11 @@ class MainActivity2 : AppCompatActivity() {
         val currentDateAndTime: String = simpleDateFormat.format(Date())
         tvTodayDate.text = currentDateAndTime
 
-        //clear list
+       /* //clear list
         if (myList.isNotEmpty()) {
             myList.clear()
         }
-
+*/
         //initialize recyclerview
         recyclerView.layoutManager = LinearLayoutManager(applicationContext)
         myAdapter_m = MyAdepter(context,myList)
