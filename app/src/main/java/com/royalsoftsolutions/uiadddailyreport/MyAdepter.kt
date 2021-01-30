@@ -1,6 +1,9 @@
 package com.royalsoftsolutions.uiadddailyreport
 
+import android.app.AlertDialog
+import android.app.Dialog
 import android.content.Context
+import android.icu.text.CaseMap
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,6 +35,7 @@ class MyAdepter(
         holder.report_sr.text = (position+1).toString()
         holder.option_popupmenu.text = daily_r_details.getOption()
         holder.adepter_Rv_Delete.setOnClickListener{deleteItem(position)}
+        holder.adepter_Rv_Edit.setOnClickListener { edit() }
     }
 
     override fun getItemCount(): Int {
@@ -51,17 +55,46 @@ class MyAdepter(
 
 
     }
+        fun edit(){
 
+
+        }
     fun updateList(list:ArrayList<RecyclerItem>){
         dailyreportList = list
         notifyDataSetChanged()
     }
-    fun deleteItem(index: Int){
-        dailyreportList.removeAt(index)
-        if(context is MainActivity2){
-            (context as MainActivity2).from_myadepter()
+
+    fun deleteItem(index: Int)
+    {
+        val alertDialog: AlertDialog.Builder = AlertDialog.Builder(context)
+        alertDialog.setTitle("Be Alert!")
+        alertDialog.setMessage("Are you sure you want to Delete this Report?")
+
+        alertDialog.setPositiveButton(
+            "yes"
+        ) { _, _ ->  delete(index);Toast.makeText(context, "Deleted Report.", Toast.LENGTH_LONG).show()
         }
-        notifyDataSetChanged()
-     //   Toast.makeText(context,"deleted", Toast.LENGTH_SHORT).show()
+        alertDialog.setNegativeButton(
+            "No"
+        ) { _, _ ->  }
+
+        val alert: AlertDialog = alertDialog.create()
+        alert.setCanceledOnTouchOutside(false)
+        alert.show()
     }
+fun delete(index: Int){
+    dailyreportList.removeAt(index)
+    notifyDataSetChanged()
+    if(context is MainActivity2){
+        (context as MainActivity2).from_myadepter()
+    }
+
+}
+
+      //val my_dilog = AlertDialog.Builder(context)
+
+
+
+
+
 }

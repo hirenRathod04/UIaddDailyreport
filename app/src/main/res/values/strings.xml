@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">UIaddDailyreport</string>
+    <string name="are_you_sure_you_want_to_delete_this_report">Are you sure you want to Delete this Report?</string>
 </resources>
