@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cvMain"
@@ -28,173 +27,186 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
     <ScrollView
         android:id="@+id/ssone"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/constraintLayout2">
-
-
-    <androidx.cardview.widget.CardView
-        android:layout_marginTop="5dp"
-        android:id="@+id/cardview"
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        app:cardCornerRadius="10dp"
-        android:padding="5dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintTop_toBottomOf="@id/ivBack"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/constraintLayout2">
+ >
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/cv"
+            android:id="@+id/constraintLayout2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
 
-            <View
-                android:id="@+id/vLine1"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                app:layout_constraintTop_toTopOf="@id/cv" />
-
-            <TextView
-                android:id="@+id/tvCurrentDate"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:background="@android:color/transparent"
-                android:gravity="center"
-                android:text="Current Date"
-                android:textColor="@color/button_color"
-                android:textSize="15sp"
-                app:layout_constraintTop_toBottomOf="@id/vLine1" />
-
-            <TextView
-                android:id="@+id/tvTodayDate"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:background="@android:color/transparent"
-                android:gravity="center"
+                android:layout_marginBottom="120dp"
                 android:padding="5dp"
-                android:text="Date"
-                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                android:textColor="@color/button_color"
-                app:layout_constraintTop_toBottomOf="@id/tvCurrentDate" />
+                app:cardCornerRadius="10dp"
+                app:cardUseCompatPadding="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/constraintLayout2"
+                app:layout_constraintBottom_toBottomOf="parent">
 
-            <TextView
-                android:id="@+id/tvAddReport"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="20dp"
-                android:background="@android:color/transparent"
-                android:text="AddReport"
-                android:textColor="@color/button_color"
-                android:textSize="15sp"
-                app:layout_constraintTop_toBottomOf="@id/tvTodayDate" />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-            <EditText
-                android:id="@+id/etReport"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/edittext_boderline"
-                android:gravity="center"
-                android:hint="Enter Report Title"
-                android:padding="10dp"
-                android:textColor="@color/Text"
-                android:textColorHint="@color/Text_hint"
-                android:textSize="20sp"
-                app:layout_constraintTop_toBottomOf="@id/tvAddReport" />
+                    <View
+                        android:id="@+id/vLine1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        app:layout_constraintTop_toTopOf="@id/cv" />
 
-            <LinearLayout
-                android:id="@+id/llAttachment"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/button_shape"
-                android:layout_marginRight="10dp"
+                    <TextView
+                        android:id="@+id/tvCurrentDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:text="Current Date"
+                        android:textColor="@color/button_color"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@id/vLine1" />
 
-                android:textColor="@color/white"
-                android:backgroundTint="@color/button_color"
+                    <TextView
+                        android:id="@+id/tvTodayDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Date"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/button_color"
+                        app:layout_constraintTop_toBottomOf="@id/tvCurrentDate" />
 
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:padding="10dp"
-                app:layout_constraintTop_toBottomOf="@id/etReport">
+                    <TextView
+                        android:id="@+id/tvAddReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@android:color/transparent"
+                        android:text="AddReport"
+                        android:textColor="@color/button_color"
+                        android:textSize="15sp"
+                        app:layout_constraintTop_toBottomOf="@id/tvTodayDate" />
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/ciFileAttachment"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_baseline_attachment_24"
-                    app:civ_border_color="@color/white"
-                    app:civ_border_width="2dp" />
+                    <EditText
+                        android:id="@+id/etReport"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/edittext_boderline"
+                        android:gravity="center"
+                        android:hint="Enter Report Title"
+                        android:maxLines="3"
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="60dp"
-                    android:gravity="center"
-                    android:background="@drawable/button_shape"
-                    android:textColor="@color/white"
-                    app:backgroundTint="@color/button_color"
-                    android:text="File Attachment"
-                    android:textColorHint="@color/Text_hint"
-                    android:textSize="20sp"/>
+                        android:padding="10dp"
+                        android:textColor="@color/Text"
+                        android:textColorHint="@color/Text_hint"
+                        android:textSize="20sp"
+                        app:layout_constraintTop_toBottomOf="@id/tvAddReport" />
 
-            </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/llAttachment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_shape"
 
-            <Button
-                android:id="@+id/btnAdd_Detalis"
-                android:textSize="20sp"
-                android:textAllCaps="false"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/button_shape"
-                android:text="Add Details"
-                android:textColor="@color/white"
-                app:backgroundTint="@color/button_color"
+                        android:backgroundTint="@color/button_color"
+                        android:gravity="center"
 
-                app:layout_constraintTop_toBottomOf="@id/llAttachment" />
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:textColor="@color/white"
+                        app:layout_constraintTop_toBottomOf="@id/etReport">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvTodayReport"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:paddingBottom="5dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginRight="10dp"
-                app:layout_constraintTop_toBottomOf="@id/btnAdd_Detalis"
-                tools:listitem="@layout/show_recyclerview" />
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/ciFileAttachment"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@android:color/transparent"
+                            android:src="@drawable/ic_baseline_attachment_24"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="2dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="60dp"
+                            android:background="@drawable/button_shape"
+                            android:gravity="center"
+                            android:text="File Attachment"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/Text_hint"
+                            android:textSize="20sp"
+                            app:backgroundTint="@color/button_color" />
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btnAdd_Detalis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/button_shape"
+                        android:text="Add Details"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        app:backgroundTint="@color/button_color"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/llAttachment" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTodayReport"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:paddingBottom="5dp"
+
+                        app:layout_constraintStart_toStartOf="@id/btnAdd_Detalis"
+                        app:layout_constraintEnd_toEndOf="@id/btnAdd_Detalis"
+                        app:layout_constraintTop_toBottomOf="@id/btnAdd_Detalis"
+                        tools:listitem="@layout/show_recyclerview" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.cardview.widget.CardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

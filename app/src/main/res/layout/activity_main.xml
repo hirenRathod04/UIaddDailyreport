@@ -28,7 +28,7 @@
        android:gravity="center"
       android:orientation="horizontal">
       <HorizontalScrollView
-          android:layout_width="110dp"
+          android:layout_width="250dp"
           android:layout_height="wrap_content"
           android:layout_gravity="center"
           android:fillViewport="true"
@@ -43,7 +43,7 @@
 
                 android:layout_width="125dp"
                 android:layout_height="125dp"
-                android:src="@drawable/shivang2" />
+                android:src="@drawable/shivang" />
 
             <ImageView
 
