@@ -58,7 +58,9 @@ class MyAdepter(
     }
     fun deleteItem(index: Int){
         dailyreportList.removeAt(index)
-       // abc.from_myadepter()
+        if(context is MainActivity2){
+            (context as MainActivity2).from_myadepter()
+        }
         notifyDataSetChanged()
      //   Toast.makeText(context,"deleted", Toast.LENGTH_SHORT).show()
     }

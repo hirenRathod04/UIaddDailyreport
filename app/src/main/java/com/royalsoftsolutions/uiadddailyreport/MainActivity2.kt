@@ -73,6 +73,7 @@ class MainActivity2 : AppCompatActivity() {
     }
     fun from_myadepter(){
         Toast.makeText(applicationContext,"deleted",Toast.LENGTH_SHORT).show()
+        Toast.makeText(context,"deleted2", Toast.LENGTH_SHORT).show()
        /* srNo = 0
         val reportData = etReport.text.toString().trim()
         myList.add(RecyclerItem(serial_no, reportData, "", ""))
