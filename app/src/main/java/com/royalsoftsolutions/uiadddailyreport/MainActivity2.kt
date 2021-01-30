@@ -72,6 +72,7 @@ class MainActivity2 : AppCompatActivity() {
         }
     }
     fun from_myadepter(){
+        myAdapter_m.updateList(myList)
         Toast.makeText(applicationContext,"deleted",Toast.LENGTH_SHORT).show()
         Toast.makeText(context,"deleted2", Toast.LENGTH_SHORT).show()
        /* srNo = 0
